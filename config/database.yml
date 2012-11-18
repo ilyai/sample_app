@@ -45,6 +45,9 @@ test:
   pool: 5
   username: sample_app
   password: xyz
+  host: localhost
+  port: 5432
+
 
 production:
   adapter: postgresql
@@ -53,3 +56,6 @@ production:
   pool: 5
   username: sample_app
   password: xyz
+  host: localhost
+  port: 5432
+
