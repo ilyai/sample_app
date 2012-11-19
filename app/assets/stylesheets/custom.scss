@@ -1,0 +1,71 @@
+
+@import "compass/css3";
+@import "blueprint/colors";
+@import "blueprint/buttons";
+@import "variables";
+
+body {
+  background: $bg-color;
+}
+
+.container {
+  width: 710px;
+  header {
+    padding-top: 20px;
+    img {
+      padding: 1em;
+      // background: #fff;
+    }
+    nav {
+      float: right;
+      background: $bg-color;
+      padding: 0 0.7em;
+      white-space: nowrap;
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style-type: none;
+          display: inline-block;
+          padding: 0.2em 0;
+          a {
+            padding: 0 5px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  section {
+    margin-top: 1em;
+    font-size: 120%;
+    padding: 20px;
+    background: $content-color;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.signup_button {
+  @include anchor-button;
+  @include background-image(linear-gradient(#eee, #aaa));
+  color: $info-color;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.round {
+  @include border-radius(5px);
+}
