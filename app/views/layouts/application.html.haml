@@ -12,13 +12,8 @@
       = stylesheet_link_tag "ie", :media => "screen"
   %body
     .container
-      %header
-        = image_tag "rails.png", :alt => "Sample App", :class => "round"
-        %nav.round
-          %ul
-            %li= link_to "Home", "#"
-            %li= link_to "Help", "#"
-            %li= link_to "Sign In", "#"
+      = render 'layouts/header'
       %section.round
         = yield
+      = render 'layouts/footer'
 
