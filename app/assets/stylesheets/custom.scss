@@ -101,3 +101,16 @@ table.profile {
     margin-bottom: -15px;
   }
 }
+
+.field,
+.actions {
+  margin-bottom: 10px;
+  label,
+  input {
+    display: block;
+  }
+  input[type="submit"] {
+    padding: 10px;
+    font-size: 100%;
+  }
+}
