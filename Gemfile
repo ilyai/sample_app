@@ -9,6 +9,7 @@ gem 'pg'
 gem 'haml'
 gem 'haml-rails'
 gem 'sass'
+gem 'gravatar_image_tag'
 
 
 # Gems used only for assets and not required
