@@ -67,7 +67,7 @@ a {
 
 .signup_button {
   @include anchor-button;
-  @include background-image(linear-gradient(#eee, #aaa));
+  @include background-image(linear-gradient(#eee, #ccc));
   color: $info-color;
   margin-left: auto;
   margin-right: auto;
@@ -112,5 +112,41 @@ table.profile {
   input[type="submit"] {
     padding: 10px;
     font-size: 100%;
+  }
+}
+
+.field_with_errors {
+  input {
+    border-color: $error-border-color;
+  }
+}
+
+#error_explanation {
+  display: inline-block;
+  border: 2px solid $error-border-color;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: $error-bg-color;
+    color: #fff;
+  }
+  p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 15px 5px 5px 5px;
+  }
+  ul {
+    margin: 0;
+    li {
+      font-size: 12px;
+      list-style: square;
+    }
   }
 }
