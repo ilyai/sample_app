@@ -32,6 +32,11 @@ describe "LayoutLinks" do
     response.should have_selector('title', :content => "Sign In")
   end
 
+  it "should have a non-external About page" do
+    visit root_path
+    response.should have_selector('a', :content => "About", :href => about_path)
+  end
+
   it "should have the right links on the layout" do
     visit root_path
     response.should have_selector('title', :content => 'Home')
