@@ -10,9 +10,10 @@ class SessionsController < ApplicationController
     if user.nil?
       flash.now[:error] = "Invalid credentials"
       @title = "Sign In"
-      render :new
+      render 'new'
     else
-      # Handle successful signin.
+      sign_in user
+      redirect_to user
     end
   end
 
