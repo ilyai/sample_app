@@ -20,6 +20,7 @@
 # Additional rails specific ignores
 *.rbc
 *.sassc
+*.lock
 .sass-cache
 .rspec
 /vendor/bundle
