@@ -129,7 +129,7 @@ describe UsersController do
 
   end
 
-  describe "PUY 'update'" do
+  describe "PUT 'update'" do
 
     before :each do
       @user = FactoryGirl.create(:user)
@@ -172,6 +172,25 @@ describe UsersController do
         put :update, :id => @user, :user => @attr
         flash[:success].should =~ /updated/i
       end
+    end
+
+  end
+
+  describe "authentication of edit/update actions" do
+
+    before :each do
+      @user = FactoryGirl.create(:user)
+    end
+
+    it "should deny access to 'edit'" do
+      get :edit, :id => @user
+      response.should redirect_to(signin_path)
+      flash[:notice].should =~ /sign in/i
+    end
+
+    it "should deny access to 'update'" do
+      put :update, :id => @user, :user => {}
+      response.should redirect_to signin_path
     end
 
   end
