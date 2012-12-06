@@ -125,6 +125,14 @@ describe UsersController do
       get :show, :id => @user
       response.should have_selector('td.sidebar', :content => @user.microposts.count.to_s)
     end
+
+    describe "when signed-in as another user" do
+      it "should be successful" do
+        test_sign_in(FactoryGirl.create(:user, :email => FactoryGirl.generate(:email)))
+        get :show, :id => @user
+        response.should be_success
+      end
+    end
   end
 
   describe "GET 'new'" do
