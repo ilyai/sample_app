@@ -8,6 +8,6 @@
             = "#{@user.following.count} following"
       %td
         %a{:href => "#{followers_user_path(@user)}"}
-          %span#following.stat
+          %span#followers.stat
             = pluralize(@user.followers.count, "follower")
 
